@@ -14,18 +14,20 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Android模板代码库"
+rootProject.name = "Android模板项目"
 
 includeBuild("build-logic")
 
 include ':app'
 include ':dfkernel'
-includeLibRepo("storage")
-includeLibRepo("storage-api")
 includeLibRepo("http")
 includeLibRepo("http-api")
+includeLibRepo("image")
 includeLibRepo("log")
 includeLibRepo("log-api")
+includeLibRepo("permission")
+includeLibRepo("storage")
+includeLibRepo("storage-api")
 includeLibRepo("utils")
 
 /**

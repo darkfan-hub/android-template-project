@@ -11,6 +11,6 @@ dependencies {
 
     implementation(AppDependencies.Http.okhttp)
     implementation(AppDependencies.Http.retrofit)
-    implementation(AppDependencies.Http.retrofitConverterGson)
+    implementation(AppDependencies.Http.gsonConverter)
     implementation(AppDependencies.Google.gson)
 }

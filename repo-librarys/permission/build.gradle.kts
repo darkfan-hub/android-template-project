@@ -6,6 +6,5 @@ plugins {
 }
 
 dependencies {
-    implementation(AppDependencies.AndroidX.androidxCore)
-    implementation(AppDependencies.Storage.mmkv)
+    implementation(com.darkfan.build.logic.AppDependencies.AndroidX.androidxCore)
 }

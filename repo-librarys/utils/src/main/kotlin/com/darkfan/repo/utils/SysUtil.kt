@@ -12,7 +12,7 @@ import java.io.File
 /**
  * @author Fanfan Gu <a href="mailto:stefan.gufan@gmail.com">Contact me.</a>
  * @date 25/04/2022 00:59
- * @desc Android system
+ * @desc Android system util.
  */
 object SysUtil {
 
@@ -97,6 +97,14 @@ object SysUtil {
     }
 
     /**
+     * 是否是 Android 12 及以上版本
+     */
+    @JvmStatic
+    fun isAndroid12(): Boolean {
+        return Build.VERSION.SDK_INT >=  Build.VERSION_CODES.S
+    }
+
+    /**
      * 获取cpu可用核心数目
      */
     @JvmStatic
@@ -159,8 +167,7 @@ object SysUtil {
         val intent = Intent(Intent.ACTION_VIEW)
         val fileUri: Uri
         if (isAndroid7()) {
-            fileUri =
-                FileProvider.getUriForFile(context, context.packageName + ".fileProvider", file)
+            fileUri = FileProvider.getUriForFile(context, context.packageName + ".fileProvider", file)
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         } else {
             fileUri = Uri.fromFile(file)

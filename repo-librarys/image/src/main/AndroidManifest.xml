@@ -1,0 +1,55 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.darkfan.repo.image">
+
+    <!-- 允许应用程序访问有关网络的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <!-- 允许应用程序访问有关Wi-Fi网络的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- 允许应用程序连接到配对的蓝牙设备。-->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <!-- 允许应用程序访问相机 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature
+        android:name="android.hardware.Camera"
+        android:required="true" />
+
+    <!-- 允许常规应用程序使用Service.startForeground. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <!-- 允许应用程序打开网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 允许为可移动存储安装和卸载文件系统。-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- 允许应用程序从外部存储读取 Android 11 -->
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
+    <!-- 允许应用程序从外部存储读取 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 允许访问电话状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- 允许应用程序请求安装包 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <!-- 允许应用程序写入外部存储 -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <!-- 允许访问振动器 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application>
+
+
+    </application>
+</manifest>
