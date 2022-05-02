@@ -1,0 +1,39 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "Android模板代码库"
+
+includeBuild("build-logic")
+
+include ':app'
+include ':dfkernel'
+includeLibRepo("storage")
+includeLibRepo("storage-api")
+includeLibRepo("http")
+includeLibRepo("http-api")
+includeLibRepo("log")
+includeLibRepo("log-api")
+includeLibRepo("utils")
+
+/**
+ * include repo module.
+ *
+ * @param name repo module name.
+ */
+def includeLibRepo(String name) {
+    include(":$name")
+    project(":$name").projectDir = new File("repo-librarys/$name")
+}

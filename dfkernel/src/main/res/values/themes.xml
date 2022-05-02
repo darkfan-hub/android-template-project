@@ -1,0 +1,92 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="DFAppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+
+        <!-- app attrs settings -->
+        <item name="appMajorColor">@color/majorColor</item>
+        <item name="appAssistColor1">@color/assistColor1</item>
+        <item name="appAssistColor2">@color/assistColor2</item>
+        <item name="appAssistColor3">@color/assistColor3</item>
+
+        <item name="appMajorTextColor">@color/color_333</item>
+        <item name="appMinorTextColor">@color/color_666</item>
+        <item name="appDescTextColor">@color/color_999</item>
+
+        <item name="appLayoutBackgroundColor">@color/color_F0F3F3</item>
+
+        <item name="appMicroTextSize">10sp</item>
+        <item name="appLittleTextSize">12sp</item>
+        <item name="appNormalTextSize">16sp</item>
+        <item name="appLargeTextSize">20sp</item>
+        <item name="appLargestTextSize">24sp</item>
+
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/majorColor</item>
+        <item name="colorPrimaryVariant">@color/majorColor</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/assistColor1</item>
+        <item name="colorSecondaryVariant">@color/assistColor1</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/appMajorColor</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">?attr/appLayoutBackgroundColor</item>
+    </style>
+
+    <!-- 启动页主题 -->
+    <style name="DFAppTheme.Splash" parent="DFAppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowBackground">@drawable/app_splash_layers</item>
+    </style>
+
+    <!-- View 主题 -->
+    <style name="DFAppTheme.View">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="DFAppTheme.View.Match" parent="DFAppTheme.View">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="DFAppTheme.View.Linear" parent="DFAppTheme.View.Match">
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!-- 正常字体, 正常字号, 文字居中显示 主题 -->
+    <style name="DFAppTheme.Text">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">?attr/appNormalTextSize</item>
+        <item name="android:textColor">?attr/appMajorTextColor</item>
+    </style>
+
+    <!-- 中粗字体, 正常字号, 文字居中显示 主题 -->
+    <style name="DFAppTheme.MediumText">
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">?attr/appNormalTextSize</item>
+        <item name="android:textColor">?attr/appMajorTextColor</item>
+    </style>
+
+    <!-- Line 主题 -->
+    <style name="DFAppTheme.Line" parent="DFAppTheme.View" />
+
+    <style name="DFAppTheme.Line.Horizontal" parent="DFAppTheme.Line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+
+    <style name="DFAppTheme.Line.Vertical" parent="DFAppTheme.Line">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 主色 #2FB8BB -->
+    <attr name="appMajorColor" format="color" />
+    <!-- 辅助色 #70C6C5 -->
+    <attr name="appAssistColor1" format="color" />
+    <!-- 辅助色 #FCAD5D -->
+    <attr name="appAssistColor2" format="color" />
+    <!-- 辅助色 #7293FA -->
+    <attr name="appAssistColor3" format="color" />
+
+    <!-- 标题文字/正文文字/主要文字 #333333 -->
+    <attr name="appMajorTextColor" format="color" />
+    <!-- 次要文字 #666666 -->
+    <attr name="appMinorTextColor" format="color" />
+    <!-- 最次要文字/描述文字/提示文字 #999999 -->
+    <attr name="appDescTextColor" format="color" />
+
+    <!-- 页面背景/模块背景 #F0F3F3 -->
+    <attr name="appLayoutBackgroundColor" format="color" />
+
+    <!-- 微小字号 10sp -->
+    <attr name="appMicroTextSize" format="dimension" />
+    <!-- 小字号 12sp -->
+    <attr name="appLittleTextSize" format="dimension" />
+    <!-- 正常字号 16sp -->
+    <attr name="appNormalTextSize" format="dimension" />
+    <!-- 大字号 20sp -->
+    <attr name="appLargeTextSize" format="dimension" />
+    <!-- 最大字号 24sp -->
+    <attr name="appLargestTextSize" format="dimension" />
+</resources>
