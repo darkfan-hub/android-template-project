@@ -1,6 +1,6 @@
 package com.darkfan.repo.simple.app
 
-import com.darkfan.repo.dfkernel.app.AbstractApp
+import com.darkfan.dfkernel.app.AbstractApp
 
 /**
  * @author Fanfan Gu <a href="mailto:stefan.gufan@gmail.com">Contact me.</a>

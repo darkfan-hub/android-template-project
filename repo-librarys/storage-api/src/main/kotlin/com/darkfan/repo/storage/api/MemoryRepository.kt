@@ -7,7 +7,7 @@ import com.darkfan.repo.storage.memory.MemoryStorage
  * @date 25/04/2022 00:45
  * @desc 内存存储 api.
  */
-object MemoryStorageApi {
+object MemoryRepository {
 
     fun putValue(key: String, value: Any) {
         MemoryStorage.memory_storage.putValue(key, value)

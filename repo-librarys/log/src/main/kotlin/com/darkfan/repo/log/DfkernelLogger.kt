@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NonNls
  * @date 17/04/2022 19:36
  * @desc logger.
  */
-class FWLogger private constructor() {
+class DfkernelLogger private constructor() {
 
     init {
         throw AssertionError()

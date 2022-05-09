@@ -1,7 +1,7 @@
 package com.darkfan.repo.http.api
 
 import com.darkfan.repo.http.HttpClient
-import com.darkfan.repo.storage.api.MemoryStorageApi
+import com.darkfan.repo.storage.api.MemoryRepository
 
 /**
  * @author Fanfan Gu <a href="mailto:stefan.gufan@gmail.com">Contact me.</a>
@@ -13,7 +13,7 @@ object HttpApi {
     fun <T> obtainRetrofitService(service: Class<T>): T {
         var retrofitService: T?
 
-        retrofitService = MemoryStorageApi.getValue(service.name) as T?
+        retrofitService = MemoryRepository.getValue(service.name) as T?
 
         if (retrofitService == null) {
             synchronized(service) {
@@ -21,7 +21,7 @@ object HttpApi {
                     retrofitService = HttpClient.createService(service)
 
                     if (retrofitService != null) {
-                        MemoryStorageApi.putValue(service.name, retrofitService!!)
+                        MemoryRepository.putValue(service.name, retrofitService!!)
                     }
                 }
             }

@@ -1,6 +1,6 @@
 package com.darkfan.repo.http.log
 
-import com.darkfan.repo.log.api.LoggerApi
+import com.darkfan.repo.log.api.Logger
 import okhttp3.FormBody
 import okhttp3.HttpUrl
 import okhttp3.Request
@@ -45,15 +45,15 @@ class Logger {
                 var i = 0
                 while (i < logString.length) {
                     if (i + MAX_STRING_LENGTH < logString.length) {
-                        LoggerApi.i(logString.substring(i, i + MAX_STRING_LENGTH))
+                        Logger.i(logString.substring(i, i + MAX_STRING_LENGTH))
                     } else {
-                        LoggerApi.i(logString.substring(i, logString.length))
+                        Logger.i(logString.substring(i, logString.length))
                     }
 
                     i += MAX_STRING_LENGTH
                 }
             } else {
-                LoggerApi.i(logString)
+                Logger.i(logString)
             }
         }
 
@@ -95,7 +95,7 @@ class Logger {
                 append(BOTTOM_BORDER)
             }.toString()
 
-            LoggerApi.i(requestString)
+            Logger.i(requestString)
         }
 
         @JvmStatic
@@ -121,7 +121,7 @@ class Logger {
 
             }.toString()
 
-            LoggerApi.i(requestString)
+            Logger.i(requestString)
         }
 
         @JvmStatic
@@ -183,7 +183,7 @@ class Logger {
                 append(BOTTOM_BORDER)
             }.toString()
 
-            LoggerApi.i(responseString)
+            Logger.i(responseString)
         }
 
         private fun getRequest(

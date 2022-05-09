@@ -1,4 +1,4 @@
-package com.darkfan.repo.dfkernel.fragment
+package com.darkfan.dfkernel.fragment
 
 /**
  * @author Fanfan Gu <a href="mailto:stefan.gufan@gmail.com">Contact me.</a>

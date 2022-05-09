@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="white">#FFFFFFFF</color>
-    <color name="black">#FF000000</color>
+    <color name="dfkernel_color_white">#FFFFFFFF</color>
+    <color name="dfkernel_color_black">#FF000000</color>
 
-    <color name="majorColor">#FF2FB8BB</color>
-    <color name="assistColor1">#FF70C6C5</color>
-    <color name="assistColor2">#FFFCAD5D</color>
-    <color name="assistColor3">#FF7293FA</color>
+    <color name="dfkernel_majorColor">#FF2FB8BB</color>
+    <color name="dfkernel_assistColor1">#FF70C6C5</color>
+    <color name="dfkernel_assistColor2">#FFFCAD5D</color>
+    <color name="dfkernel_assistColor3">#FF7293FA</color>
 
-    <color name="color_333">#FF333333</color>
-    <color name="color_666">#FF666666</color>
-    <color name="color_999">#FF999999</color>
+    <color name="dfkernel_color_333">#FF333333</color>
+    <color name="dfkernel_color_666">#FF666666</color>
+    <color name="dfkernel_color_999">#FF999999</color>
 
-    <color name="color_F0F3F3">#FFF0F3F3</color>
+    <color name="dfkernel_color_F0F3F3">#FFF0F3F3</color>
 </resources>

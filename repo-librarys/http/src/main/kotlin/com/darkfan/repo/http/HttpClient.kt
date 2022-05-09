@@ -21,6 +21,28 @@ object HttpClient {
     private const val call_timeout = 90L
     private const val connect_timeout = 60L
 
+    private val _okHttpClientBuilder: OkHttpClient.Builder by lazy {
+        val okBuilder = OkHttpClient.Builder()
+        // 整个流程耗费的超时时间
+        okBuilder.callTimeout(call_timeout, TimeUnit.SECONDS)
+        // 三次握手 + SSL建立耗时
+        okBuilder.connectTimeout(connect_timeout, TimeUnit.SECONDS)
+        // source读取耗时 | rawSocket读取耗时
+        okBuilder.readTimeout(call_timeout, TimeUnit.SECONDS)
+        // sink写入耗时
+        okBuilder.writeTimeout(call_timeout, TimeUnit.SECONDS)
+
+        // 开发模式下添加日志打印
+        if (BuildConfig.IS_DEV_MODE) {
+            okBuilder.addInterceptor(LoggingInterceptor.Builder().build())
+        }
+
+        // 添加业务拦截器.
+        okBuilder.addInterceptor(BusinessInterceptor())
+
+        okBuilder
+    }
+
     private val _okHttpClient: OkHttpClient by lazy {
         val okBuilder = OkHttpClient.Builder()
         // 整个流程耗费的超时时间
